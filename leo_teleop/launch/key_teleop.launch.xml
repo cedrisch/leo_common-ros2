@@ -7,7 +7,7 @@
     pkg="teleop_twist_keyboard"
     exec="teleop_twist_keyboard"
     output="screen"
-    launch-prefix="gnome-terminal -- bash -c">
+    launch-prefix="xterm -e">
     <param name="speed" value="0.4" />
     <param name="turn" value="1.0" />
     <param name="repeat_rate" value="10.0" />
