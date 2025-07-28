@@ -7,9 +7,16 @@
   <xacro:arg name="mecanum_wheels" default="false"/>
 
   <xacro:include filename="$(find leo_description)/urdf/macros.xacro"/>
+  <xacro:include filename="$(find leo_description)/urdf/lidar.urdf.xacro"/>
+
 
   <xacro:leo_sim robot_ns="$(arg robot_ns)"
                  fixed="$(arg fixed)"
                  mecanum_wheels="$(arg mecanum_wheels)"/>
+
+<!-- Attach the RPLidar to the robot -->
+  <xacro:lidar_sensor prefix="${link_prefix}"
+                      parent="base_link"
+                      topic_name="${link_prefix}scan"/>
 
 </robot>
